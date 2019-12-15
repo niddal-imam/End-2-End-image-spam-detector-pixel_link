@@ -6,7 +6,7 @@ This repo implements a spam detector for OSNs' massages contine an image. The Sp
 (You can see the complete code for text recognition in this [repo](https://github.com/THUliumeng/crnn.pytorch).  
 3. Text classification
 ## File structure  
-1. east：the necessary files for text localization, include the pretrained model for text localization.(you need to download the pretrained EAST model [from this repo](https://github.com/argman/EAST) and put the folder in the ./east/ directory)    
+1. pixel linke：the necessary files for text localization, include the pretrained model for text localization can be foud in this repo.
 2. crnn：the necessary files for text recognition, include the pretrained model for text recognition.（you need to download the pretrained model [from this repo](https://github.com/meijieru/crnn.pytorch) and put it under the ./crnn/models/ directory.)      
 3. end_to_end.py: implement the image spam detection.  
 
@@ -83,7 +83,7 @@ The detection results can be visualized via `scripts/vis.sh`.
 Here are some samples:
 ![./pixel_result/icdar2017/test_28_pred.jpg](./pixel_result/icdar2017/test_28_pred.jpg)
 ![./pixel_result/icdar2017/test_30_pred.jpg](./pixel_result/icdar2017/test_30_pred.jpg)
-![./pixel_result/icdar2017/test_31_pred.jpg](./pixel_result/icdar2017/test_31_pred.jpg)
+![./pixel_result/icdar2017/test_31_pred.jpg](./pixel_result/icdar2017/test_27_pred.jpg)
 
 
 
