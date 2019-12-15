@@ -81,8 +81,10 @@ The program will create a zip file of  detection results, which can be submitted
 The detection results can be visualized via `scripts/vis.sh`.
 
 Here are some samples:
-![./samples/img_333_pred.jpg](./samples/img_333_pred.jpg)
-![./samples/img_249_pred.jpg](./samples/img_249_pred.jpg)
+![./pixel_result/icdar2017/test_28_pred.jpg](pixel_result/icdar2017/test_28_pred.jpg)
+![./pixel_result/icdar2017/test_30_pred.jpg](./pixel_result/icdar2017/test_30_pred.jpg)
+![./pixel_result/icdar2017/test_31_pred.jpg](./pixel_result/icdar2017/test_31_pred.jpg)
+
 
 
 ## Test on any images
