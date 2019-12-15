@@ -77,11 +77,11 @@ For example:
 ./scripts/test.sh 3 ~/temp/conv3_3/model.ckpt-38055 ~/dataset/ICDAR2015/Challenge4/ch4_test_images
 ```
 
-The program will create a zip file of  detection results, which can be submitted to the ICDAR2015 server directly.
+The program will create a zip file of  detection results, which can be tested by using CRNN-test/config/.
 The detection results can be visualized via `scripts/vis.sh`.
 
 Here are some samples:
-![./pixel_result/icdar2017/test_28_pred.jpg](pixel_result/icdar2017/test_28_pred.jpg)
+![./pixel_result/icdar2017/test_28_pred.jpg](./pixel_result/icdar2017/test_28_pred.jpg)
 ![./pixel_result/icdar2017/test_30_pred.jpg](./pixel_result/icdar2017/test_30_pred.jpg)
 ![./pixel_result/icdar2017/test_31_pred.jpg](./pixel_result/icdar2017/test_31_pred.jpg)
 
