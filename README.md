@@ -1,8 +1,14 @@
-Code for the AAAI18 paper [PixelLink: Detecting Scene Text via Instance Segmentation](https://arxiv.org/abs/1801.01315), by Dan Deng, Haifeng Liu, Xuelong Li, and Deng Cai.
-
-Contributions to this repo are welcome, e.g., some other backbone networks (including the model definition and pretrained models).
-
-PLEASE CHECK EXSITING ISSUES BEFORE OPENNING YOUR OWN ONE. IF A SAME OR SIMILAR ISSUE HAD BEEN POSTED BEFORE, JUST REFER TO IT, AND DO NO OPEN A NEW ONE.
+# Spam-image-detector using Pixel-Link + Crnn
+This repo implements a spam detector for OSNs' massages contine an image. The Spam image detector is divided into three steps：
+1. Text localization     
+(You can see the complete code for text localization in this [repo](https://github.com/ZJULearning/pixel_link). 
+2. Text recognition    
+(You can see the complete code for text recognition in this [repo](https://github.com/THUliumeng/crnn.pytorch).  
+3. Text classification
+## File structure  
+1. east：the necessary files for text localization, include the pretrained model for text localization.(you need to download the pretrained EAST model [from this repo](https://github.com/argman/EAST) and put the folder in the ./east/ directory)    
+2. crnn：the necessary files for text recognition, include the pretrained model for text recognition.（you need to download the pretrained model [from this repo](https://github.com/meijieru/crnn.pytorch) and put it under the ./crnn/models/ directory.)      
+3. end_to_end.py: implement the image spam detection.  
 
 # Installation
 ## Clone the repo
@@ -33,6 +39,11 @@ Anaconda is recommended to for an easier installation:
 conda env create --file pixel_link_env.txt
 source activate pixel_link
 ```
+  
+## Train
+For training the models please refer to the orginal repos:
+1. [Pixel_Linke](https://github.com/ZJULearning/pixel_link)
+2. [CRNN](https://github.com/meijieru/crnn.pytorch)
 
 # Testing
 ## Download the pretrained model
@@ -110,6 +121,4 @@ For example, `./scripts/train.sh 0,1,2 8`.
 
 The existing training strategy in `scripts/train.sh` is configured for icdar2015, modify it if necessary.  A lot of training or model options  are available in `config.py`, try it yourself if you are interested.
 
-# Acknowlegement
-![](http://www.cad.zju.edu.cn/templets/default/imgzd/logo.jpg)
-![](http://www.cvte.com/images/logo.png)
+Code for the AAAI18 paper [PixelLink: Detecting Scene Text via Instance Segmentation](https://arxiv.org/abs/1801.01315), by Dan Deng, Haifeng Liu, Xuelong Li, and Deng Cai.
