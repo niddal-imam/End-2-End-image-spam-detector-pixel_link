@@ -1,0 +1,650 @@
+2019-07-08 16:50:10
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+{'batch_size': <absl.flags._flag.Flag object at 0x7effb9a8b1d0>,
+ 'checkpoint_exclude_scopes': <absl.flags._flag.Flag object at 0x7effb9a8b450>,
+ 'checkpoint_path': <absl.flags._flag.Flag object at 0x7effb9a8b050>,
+ 'dataset_dir': <absl.flags._flag.Flag object at 0x7effb9a8b910>,
+ 'dataset_name': <absl.flags._flag.Flag object at 0x7effb9a8b810>,
+ 'dataset_split_name': <absl.flags._flag.Flag object at 0x7effb9a8b890>,
+ 'gpu_memory_fraction': <absl.flags._flag.Flag object at 0x7effb9a8b110>,
+ 'h': <tensorflow.python.platform.app._HelpFlag object at 0x7effb9a8ba50>,
+ 'help': <tensorflow.python.platform.app._HelpFlag object at 0x7effb9a8ba50>,
+ 'helpfull': <tensorflow.python.platform.app._HelpfullFlag object at 0x7effb9a8ba90>,
+ 'helpshort': <tensorflow.python.platform.app._HelpshortFlag object at 0x7effb9a8bad0>,
+ 'ignore_missing_vars': <absl.flags._flag.BooleanFlag object at 0x7effb9a8b390>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7effb9a8b4d0>,
+ 'log_every_n_steps': <absl.flags._flag.Flag object at 0x7effb9a8b350>,
+ 'max_number_of_steps': <absl.flags._flag.Flag object at 0x7effb9a8b2d0>,
+ 'momentum': <absl.flags._flag.Flag object at 0x7effb9a8b550>,
+ 'moving_average_decay': <absl.flags._flag.Flag object at 0x7effb9a8b690>,
+ 'num_gpus': <absl.flags._flag.Flag object at 0x7effb9a8b250>,
+ 'num_preprocessing_threads': <absl.flags._flag.Flag object at 0x7effb9a8b790>,
+ 'num_readers': <absl.flags._flag.Flag object at 0x7effb9a8b710>,
+ 'train_dir': <absl.flags._flag.Flag object at 0x7effb9afbf90>,
+ 'train_image_height': <absl.flags._flag.Flag object at 0x7effb9a8ba10>,
+ 'train_image_width': <absl.flags._flag.Flag object at 0x7effb9a8b990>,
+ 'using_moving_average': <absl.flags._flag.BooleanFlag object at 0x7effb9a8b610>,
+ 'weight_decay': <absl.flags._flag.Flag object at 0x7effb9a8b5d0>}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=7'
+"gpus=['/gpu:0', '/gpu:1', '/gpu:2', '/gpu:3', '/gpu:4', '/gpu:5', '/gpu:6']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/niddal/Desktop/PhD_projects/pixel_link-master/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=70'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=10'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0', 'clone_1', 'clone_2', 'clone_3', 'clone_4', 'clone_5', 'clone_6']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/niddal/Desktop/PhD_projects/pixel_link-master/datasets/TF/icdar2017_train.tfrecord']
+
+2019-07-08 16:51:58
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/niddal/model.ckpt-0
+{'batch_size': <absl.flags._flag.Flag object at 0x7fec649811d0>,
+ 'checkpoint_exclude_scopes': <absl.flags._flag.Flag object at 0x7fec64981450>,
+ 'checkpoint_path': <absl.flags._flag.Flag object at 0x7fec64981050>,
+ 'dataset_dir': <absl.flags._flag.Flag object at 0x7fec64981910>,
+ 'dataset_name': <absl.flags._flag.Flag object at 0x7fec64981810>,
+ 'dataset_split_name': <absl.flags._flag.Flag object at 0x7fec64981890>,
+ 'gpu_memory_fraction': <absl.flags._flag.Flag object at 0x7fec64981110>,
+ 'h': <tensorflow.python.platform.app._HelpFlag object at 0x7fec64981a50>,
+ 'help': <tensorflow.python.platform.app._HelpFlag object at 0x7fec64981a50>,
+ 'helpfull': <tensorflow.python.platform.app._HelpfullFlag object at 0x7fec64981a90>,
+ 'helpshort': <tensorflow.python.platform.app._HelpshortFlag object at 0x7fec64981ad0>,
+ 'ignore_missing_vars': <absl.flags._flag.BooleanFlag object at 0x7fec64981390>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7fec649814d0>,
+ 'log_every_n_steps': <absl.flags._flag.Flag object at 0x7fec64981350>,
+ 'max_number_of_steps': <absl.flags._flag.Flag object at 0x7fec649812d0>,
+ 'momentum': <absl.flags._flag.Flag object at 0x7fec64981550>,
+ 'moving_average_decay': <absl.flags._flag.Flag object at 0x7fec64981690>,
+ 'num_gpus': <absl.flags._flag.Flag object at 0x7fec64981250>,
+ 'num_preprocessing_threads': <absl.flags._flag.Flag object at 0x7fec64981790>,
+ 'num_readers': <absl.flags._flag.Flag object at 0x7fec64981710>,
+ 'train_dir': <absl.flags._flag.Flag object at 0x7fec649f1f90>,
+ 'train_image_height': <absl.flags._flag.Flag object at 0x7fec64981a10>,
+ 'train_image_width': <absl.flags._flag.Flag object at 0x7fec64981990>,
+ 'using_moving_average': <absl.flags._flag.BooleanFlag object at 0x7fec64981610>,
+ 'weight_decay': <absl.flags._flag.Flag object at 0x7fec649815d0>}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=3'
+"gpus=['/gpu:0', '/gpu:1', '/gpu:2']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/niddal/config.py'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=30'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=10'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0', 'clone_1', 'clone_2']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/niddal/Desktop/PhD_projects/pixel_link-master/datasets/TF/icdar2017_train.tfrecord']
+
+2019-07-08 16:55:23
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/niddal/model.ckpt-0
+{'batch_size': <absl.flags._flag.Flag object at 0x7f6badc731d0>,
+ 'checkpoint_exclude_scopes': <absl.flags._flag.Flag object at 0x7f6badc73450>,
+ 'checkpoint_path': <absl.flags._flag.Flag object at 0x7f6badc73050>,
+ 'dataset_dir': <absl.flags._flag.Flag object at 0x7f6badc73910>,
+ 'dataset_name': <absl.flags._flag.Flag object at 0x7f6badc73810>,
+ 'dataset_split_name': <absl.flags._flag.Flag object at 0x7f6badc73890>,
+ 'gpu_memory_fraction': <absl.flags._flag.Flag object at 0x7f6badc73110>,
+ 'h': <tensorflow.python.platform.app._HelpFlag object at 0x7f6badc73a50>,
+ 'help': <tensorflow.python.platform.app._HelpFlag object at 0x7f6badc73a50>,
+ 'helpfull': <tensorflow.python.platform.app._HelpfullFlag object at 0x7f6badc73a90>,
+ 'helpshort': <tensorflow.python.platform.app._HelpshortFlag object at 0x7f6badc73ad0>,
+ 'ignore_missing_vars': <absl.flags._flag.BooleanFlag object at 0x7f6badc73390>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7f6badc734d0>,
+ 'log_every_n_steps': <absl.flags._flag.Flag object at 0x7f6badc73350>,
+ 'max_number_of_steps': <absl.flags._flag.Flag object at 0x7f6badc732d0>,
+ 'momentum': <absl.flags._flag.Flag object at 0x7f6badc73550>,
+ 'moving_average_decay': <absl.flags._flag.Flag object at 0x7f6badc73690>,
+ 'num_gpus': <absl.flags._flag.Flag object at 0x7f6badc73250>,
+ 'num_preprocessing_threads': <absl.flags._flag.Flag object at 0x7f6badc73790>,
+ 'num_readers': <absl.flags._flag.Flag object at 0x7f6badc73710>,
+ 'train_dir': <absl.flags._flag.Flag object at 0x7f6badce3f90>,
+ 'train_image_height': <absl.flags._flag.Flag object at 0x7f6badc73a10>,
+ 'train_image_width': <absl.flags._flag.Flag object at 0x7f6badc73990>,
+ 'using_moving_average': <absl.flags._flag.BooleanFlag object at 0x7f6badc73610>,
+ 'weight_decay': <absl.flags._flag.Flag object at 0x7f6badc735d0>}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/niddal/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=500'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=500'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/niddal/Desktop/PhD_projects/pixel_link-master/datasets/TF/icdar2017_train.tfrecord']
+
+2019-07-08 16:57:00
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/niddal/model.ckpt-0
+{'batch_size': <absl.flags._flag.Flag object at 0x7f4870c7b1d0>,
+ 'checkpoint_exclude_scopes': <absl.flags._flag.Flag object at 0x7f4870c7b450>,
+ 'checkpoint_path': <absl.flags._flag.Flag object at 0x7f4870c7b050>,
+ 'dataset_dir': <absl.flags._flag.Flag object at 0x7f4870c7b910>,
+ 'dataset_name': <absl.flags._flag.Flag object at 0x7f4870c7b810>,
+ 'dataset_split_name': <absl.flags._flag.Flag object at 0x7f4870c7b890>,
+ 'gpu_memory_fraction': <absl.flags._flag.Flag object at 0x7f4870c7b110>,
+ 'h': <tensorflow.python.platform.app._HelpFlag object at 0x7f4870c7ba50>,
+ 'help': <tensorflow.python.platform.app._HelpFlag object at 0x7f4870c7ba50>,
+ 'helpfull': <tensorflow.python.platform.app._HelpfullFlag object at 0x7f4870c7ba90>,
+ 'helpshort': <tensorflow.python.platform.app._HelpshortFlag object at 0x7f4870c7bad0>,
+ 'ignore_missing_vars': <absl.flags._flag.BooleanFlag object at 0x7f4870c7b390>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7f4870c7b4d0>,
+ 'log_every_n_steps': <absl.flags._flag.Flag object at 0x7f4870c7b350>,
+ 'max_number_of_steps': <absl.flags._flag.Flag object at 0x7f4870c7b2d0>,
+ 'momentum': <absl.flags._flag.Flag object at 0x7f4870c7b550>,
+ 'moving_average_decay': <absl.flags._flag.Flag object at 0x7f4870c7b690>,
+ 'num_gpus': <absl.flags._flag.Flag object at 0x7f4870c7b250>,
+ 'num_preprocessing_threads': <absl.flags._flag.Flag object at 0x7f4870c7b790>,
+ 'num_readers': <absl.flags._flag.Flag object at 0x7f4870c7b710>,
+ 'train_dir': <absl.flags._flag.Flag object at 0x7f4870cebf90>,
+ 'train_image_height': <absl.flags._flag.Flag object at 0x7f4870c7ba10>,
+ 'train_image_width': <absl.flags._flag.Flag object at 0x7f4870c7b990>,
+ 'using_moving_average': <absl.flags._flag.BooleanFlag object at 0x7f4870c7b610>,
+ 'weight_decay': <absl.flags._flag.Flag object at 0x7f4870c7b5d0>}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/niddal/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=100'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=100'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/niddal/Desktop/PhD_projects/pixel_link-master/datasets/TF/icdar2017_train.tfrecord']
+
+2019-07-08 16:57:57
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/niddal/model.ckpt-0
+{'batch_size': <absl.flags._flag.Flag object at 0x7fd23de091d0>,
+ 'checkpoint_exclude_scopes': <absl.flags._flag.Flag object at 0x7fd23de09450>,
+ 'checkpoint_path': <absl.flags._flag.Flag object at 0x7fd23de09050>,
+ 'dataset_dir': <absl.flags._flag.Flag object at 0x7fd23de09910>,
+ 'dataset_name': <absl.flags._flag.Flag object at 0x7fd23de09810>,
+ 'dataset_split_name': <absl.flags._flag.Flag object at 0x7fd23de09890>,
+ 'gpu_memory_fraction': <absl.flags._flag.Flag object at 0x7fd23de09110>,
+ 'h': <tensorflow.python.platform.app._HelpFlag object at 0x7fd23de09a50>,
+ 'help': <tensorflow.python.platform.app._HelpFlag object at 0x7fd23de09a50>,
+ 'helpfull': <tensorflow.python.platform.app._HelpfullFlag object at 0x7fd23de09a90>,
+ 'helpshort': <tensorflow.python.platform.app._HelpshortFlag object at 0x7fd23de09ad0>,
+ 'ignore_missing_vars': <absl.flags._flag.BooleanFlag object at 0x7fd23de09390>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7fd23de094d0>,
+ 'log_every_n_steps': <absl.flags._flag.Flag object at 0x7fd23de09350>,
+ 'max_number_of_steps': <absl.flags._flag.Flag object at 0x7fd23de092d0>,
+ 'momentum': <absl.flags._flag.Flag object at 0x7fd23de09550>,
+ 'moving_average_decay': <absl.flags._flag.Flag object at 0x7fd23de09690>,
+ 'num_gpus': <absl.flags._flag.Flag object at 0x7fd23de09250>,
+ 'num_preprocessing_threads': <absl.flags._flag.Flag object at 0x7fd23de09790>,
+ 'num_readers': <absl.flags._flag.Flag object at 0x7fd23de09710>,
+ 'train_dir': <absl.flags._flag.Flag object at 0x7fd23de79f90>,
+ 'train_image_height': <absl.flags._flag.Flag object at 0x7fd23de09a10>,
+ 'train_image_width': <absl.flags._flag.Flag object at 0x7fd23de09990>,
+ 'using_moving_average': <absl.flags._flag.BooleanFlag object at 0x7fd23de09610>,
+ 'weight_decay': <absl.flags._flag.Flag object at 0x7fd23de095d0>}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=3'
+"gpus=['/gpu:0', '/gpu:1', '/gpu:2']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/niddal/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=30'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=10'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0', 'clone_1', 'clone_2']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/niddal/Desktop/PhD_projects/pixel_link-master/datasets/TF/icdar2017_train.tfrecord']
+
+2019-07-08 16:58:35
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/niddal/model.ckpt-0
+{'batch_size': <absl.flags._flag.Flag object at 0x7f2a2d30b1d0>,
+ 'checkpoint_exclude_scopes': <absl.flags._flag.Flag object at 0x7f2a2d30b450>,
+ 'checkpoint_path': <absl.flags._flag.Flag object at 0x7f2a2d30b050>,
+ 'dataset_dir': <absl.flags._flag.Flag object at 0x7f2a2d30b910>,
+ 'dataset_name': <absl.flags._flag.Flag object at 0x7f2a2d30b810>,
+ 'dataset_split_name': <absl.flags._flag.Flag object at 0x7f2a2d30b890>,
+ 'gpu_memory_fraction': <absl.flags._flag.Flag object at 0x7f2a2d30b110>,
+ 'h': <tensorflow.python.platform.app._HelpFlag object at 0x7f2a2d30ba50>,
+ 'help': <tensorflow.python.platform.app._HelpFlag object at 0x7f2a2d30ba50>,
+ 'helpfull': <tensorflow.python.platform.app._HelpfullFlag object at 0x7f2a2d30ba90>,
+ 'helpshort': <tensorflow.python.platform.app._HelpshortFlag object at 0x7f2a2d30bad0>,
+ 'ignore_missing_vars': <absl.flags._flag.BooleanFlag object at 0x7f2a2d30b390>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7f2a2d30b4d0>,
+ 'log_every_n_steps': <absl.flags._flag.Flag object at 0x7f2a2d30b350>,
+ 'max_number_of_steps': <absl.flags._flag.Flag object at 0x7f2a2d30b2d0>,
+ 'momentum': <absl.flags._flag.Flag object at 0x7f2a2d30b550>,
+ 'moving_average_decay': <absl.flags._flag.Flag object at 0x7f2a2d30b690>,
+ 'num_gpus': <absl.flags._flag.Flag object at 0x7f2a2d30b250>,
+ 'num_preprocessing_threads': <absl.flags._flag.Flag object at 0x7f2a2d30b790>,
+ 'num_readers': <absl.flags._flag.Flag object at 0x7f2a2d30b710>,
+ 'train_dir': <absl.flags._flag.Flag object at 0x7f2a2d37bf90>,
+ 'train_image_height': <absl.flags._flag.Flag object at 0x7f2a2d30ba10>,
+ 'train_image_width': <absl.flags._flag.Flag object at 0x7f2a2d30b990>,
+ 'using_moving_average': <absl.flags._flag.BooleanFlag object at 0x7f2a2d30b610>,
+ 'weight_decay': <absl.flags._flag.Flag object at 0x7f2a2d30b5d0>}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/niddal/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=10'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=10'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/niddal/Desktop/PhD_projects/pixel_link-master/datasets/TF/icdar2017_train.tfrecord']
+
+2019-07-08 17:00:20
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/niddal/model.ckpt-100
+{'batch_size': <absl.flags._flag.Flag object at 0x7f7f65411190>,
+ 'checkpoint_exclude_scopes': <absl.flags._flag.Flag object at 0x7f7f65411410>,
+ 'checkpoint_path': <absl.flags._flag.Flag object at 0x7f7f65481fd0>,
+ 'dataset_dir': <absl.flags._flag.Flag object at 0x7f7f654118d0>,
+ 'dataset_name': <absl.flags._flag.Flag object at 0x7f7f654117d0>,
+ 'dataset_split_name': <absl.flags._flag.Flag object at 0x7f7f65411850>,
+ 'gpu_memory_fraction': <absl.flags._flag.Flag object at 0x7f7f654110d0>,
+ 'h': <tensorflow.python.platform.app._HelpFlag object at 0x7f7f65411a10>,
+ 'help': <tensorflow.python.platform.app._HelpFlag object at 0x7f7f65411a10>,
+ 'helpfull': <tensorflow.python.platform.app._HelpfullFlag object at 0x7f7f65411a50>,
+ 'helpshort': <tensorflow.python.platform.app._HelpshortFlag object at 0x7f7f65411a90>,
+ 'ignore_missing_vars': <absl.flags._flag.BooleanFlag object at 0x7f7f65411350>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7f7f65411490>,
+ 'log_every_n_steps': <absl.flags._flag.Flag object at 0x7f7f65411310>,
+ 'max_number_of_steps': <absl.flags._flag.Flag object at 0x7f7f65411290>,
+ 'momentum': <absl.flags._flag.Flag object at 0x7f7f65411510>,
+ 'moving_average_decay': <absl.flags._flag.Flag object at 0x7f7f65411650>,
+ 'num_gpus': <absl.flags._flag.Flag object at 0x7f7f65411210>,
+ 'num_preprocessing_threads': <absl.flags._flag.Flag object at 0x7f7f65411750>,
+ 'num_readers': <absl.flags._flag.Flag object at 0x7f7f654116d0>,
+ 'train_dir': <absl.flags._flag.Flag object at 0x7f7f65481f50>,
+ 'train_image_height': <absl.flags._flag.Flag object at 0x7f7f654119d0>,
+ 'train_image_width': <absl.flags._flag.Flag object at 0x7f7f65411950>,
+ 'using_moving_average': <absl.flags._flag.BooleanFlag object at 0x7f7f654115d0>,
+ 'weight_decay': <absl.flags._flag.Flag object at 0x7f7f65411590>}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/niddal/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=10'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=10'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/niddal/Desktop/PhD_projects/pixel_link-master/datasets/TF/icdar2017_train.tfrecord']
+
