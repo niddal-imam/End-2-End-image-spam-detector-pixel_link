@@ -58,40 +58,5 @@ Here are some samples:
 
 
 
-## Test on any images
-Put the images to be tested in a single directory, i.e., `${image_dir}`. Then:
-```
-cd ${pixel_link_root}
-./scripts/test_any.sh ${GPU_ID} ${model_path}/model.ckpt-xxx ${image_dir}
-```
-For example:
-```
- ./scripts/test_any.sh 3 ~/temp/conv3_3/model.ckpt-38055 ~/dataset/ICDAR2015/Challenge4/ch4_training_images
-```
-
-The program will visualize the detection results directly on images.   If the detection result is not satisfying, try to:
-
-1. Adjust the inference parameters like `eval_image_width`, `eval_image_height`, `pixel_conf_threshold`, `link_conf_threshold`.
-2. Or train your own model.
-
-# Training
-## Converting the dataset to tfrecords files
-Scripts for converting ICDAR2015 and SynthText datasets have been provided in the `datasets` directory.
- It not hard to write a converting script  for your own dataset.
-
-## Train your own model
-
-* Modify `scripts/train.sh` to configure your dataset name and dataset path like:
-```
-DATASET=icdar2015
-DATASET_DIR=$HOME/dataset/pixel_link/icdar2015
-```
-* Start training
-```
-./scripts/train.sh ${GPU_IDs} ${IMG_PER_GPU}
-```
-For example, `./scripts/train.sh 0,1,2 8`. 
-
-The existing training strategy in `scripts/train.sh` is configured for icdar2015, modify it if necessary.  A lot of training or model options  are available in `config.py`, try it yourself if you are interested.
 
 Code for the AAAI18 paper [PixelLink: Detecting Scene Text via Instance Segmentation](https://arxiv.org/abs/1801.01315), by Dan Deng, Haifeng Liu, Xuelong Li, and Deng Cai.
