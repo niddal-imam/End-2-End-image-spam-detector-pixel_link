@@ -46,36 +46,7 @@ For training the models please refer to the orginal repos:
 2. [CRNN](https://github.com/meijieru/crnn.pytorch)
 
 # Testing
-## Download the pretrained model
-* PixelLink + VGG16 4s [Baidu Netdisk](https://pan.baidu.com/s/1jsOc-cutC4GyF-wMMyj5-w) | [GoogleDrive](https://drive.google.com/file/d/19mlX5W8OBalSjhf5oTTS6qEq2eAU8Tg9/view?usp=sharing), trained on IC15
-* PixelLink + VGG16 2s [Baidu Netdisk](https://pan.baidu.com/s/1asSFsRSgviU2GnvGt2lAUw) | [GoogleDrive](https://drive.google.com/file/d/1QleZxu_6PSI733G7wzbqeFtc8A3-LmWW/view?usp=sharing), trained on IC15
 
-Unzip the downloaded model. It contains 4 files:
-
-* config.py
-* model.ckpt-xxx.data-00000-of-00001
-* model.ckpt-xxx.index  
-* model.ckpt-xxx.meta
-
-Denote their parent directory as `${model_path}`.
-
-## Test on ICDAR2015
-The reported results on ICDAR2015  are:
-
-|Model|Recall|Precision|F-mean|
-|---|---|---|---|
-|PixelLink+VGG16 2s|82.0|85.5|83.7|
-|PixelLink+VGG16 4s|81.7|82.9|82.3|
-
-Suppose you have downloaded the [ICDAR2015 dataset](http://rrc.cvc.uab.es/?ch=4&com=downloads), execute the following commands to test the model on ICDAR2015:
-```
-cd ${pixel_link_root}
-./scripts/test.sh ${GPU_ID} ${model_path}/model.ckpt-xxx ${path_to_icdar2015}/ch4_test_images
-```
-For example:
-```
-./scripts/test.sh 3 ~/temp/conv3_3/model.ckpt-38055 ~/dataset/ICDAR2015/Challenge4/ch4_test_images
-```
 
 The program will create a zip file of  detection results, which can be tested by using CRNN-test/config/.
 The detection results can be visualized via `scripts/vis.sh`.
